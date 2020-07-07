@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home with Express & EJS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  </head>
+  <body>
+
+    <%- include ('partials/navigation.ejs') -%>
+
+    <style>
+    .masthead {
+      height: 100vh;
+      min-height: 500px;
+      background-image: url('https://source.unsplash.com/BtbjCFUvBXs/1920x1080');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    </style>
+
+    <!-- Full Page Image Header with Vertically Centered Content -->
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-12 text-center">
+            <h1 class="font-weight-light display-2">Navegación URL</h1>
+            <p class="lead text-muted" style="font-size: 2.5rem;">
+              <small>
+                Esta website de ejemplo muestra una forma de usar Nodejs y Express para crear un server simple capaz de servir datos distintos según la URL solicitada.
+              </small>
+            </p>
+            <p class="text-muted" style="font-size: 2rem;">En este caso existe tres rutas:</p>
+            <div class="d-flex justify-content-center" style="font-size: 1.5rem;">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">"/" : Home</li>
+                <li class="list-group-item">"/login" : Log in</li>
+                <li class="list-group-item">"*" : captura cualquier URL<br/>otra para servir una página 404</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js" charset="utf-8"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" charset="utf-8"></script>
+  </body>
+</html>
